@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Об'єднана форма та таблиця</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="form-container">
+        <div class="form-left">
+            <h2>Форма для заповнення</h2>
+            <form id="myForm">
+                <label for="name">ПІБ:</label>
+                <input type="text" id="name" name="name" placeholder="ТТТТТТ Т.Т.">
+                
+                <label for="phone">Телефон:</label>
+                <input type="text" id="phone" name="phone" placeholder="(ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ" oninput="formatPhone()">
+                
+                <label for="faculty">Факультет:</label>
+                <input type="text" id="faculty" name="faculty" placeholder="ТТТТ">
+                
+                <label for="dob">Дата народж.:</label>
+                <input type="text" id="dob" name="dob" placeholder="ЧЧ.ЧЧ.ЧЧЧЧ" oninput="formatDob()">
+                
+                <label for="address">Адреса:</label>
+                <input type="text" id="address" name="address" placeholder="м. ЧЧЧЧЧЧ">
+                
+                <button type="button" onclick="validateForm()">Підтвердити</button>
+            </form>
+            <div id="errorMessages" class="error"></div>
+        </div>
+
+        <div class="form-right">
+            <h3>Введені дані</h3>
+            <p>ПІБ: <span id="outputName"></span></p>
+            <p>Телефон: <span id="outputPhone"></span></p>
+            <p>Факультет: <span id="outputFaculty"></span></p>
+            <p>Дата народ.: <span id="outputDob"></span></p>
+            <p>Адреса: <span id="outputAddress"></span></p>
+        </div>
+    </div>
+
+    <h1>Таблиця завдання 2</h1>
+    <div class="color-picker-container">
+        <input type="color" id="colorPicker" value="#ff0000">
+    </div>
+    <table id="myTable"></table>
+
+    <script src="script.js"></script>
+</body>
+</html>
